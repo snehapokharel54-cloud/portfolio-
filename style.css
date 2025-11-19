@@ -2,15 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #bfece7;
     color: #333;
 }
 header {
-    background: #4a148c;
-    color: white;
+    background: #b771a2;
+    color: rgba(5, 24, 103, 0.822);
     padding: 50px 20px;
     text-align: center;
-}
+}   
 header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -25,22 +25,22 @@ header p {
     padding: 20px;
 }
 h2 {
-    color: #4a148c;
-    border-left: 5px solid #4a148c;
+    color: #b771a2;
+    ;
     padding-left: 10px;
 }
 section {
-    background: #f7f7f7;
+    background: #bfece7;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgb(5, 48, 97);
 }
 ul {
     padding-left: 20px;
 }
 footer {
-    background: #4a148c;
+    background: #b771a2;
     color: white;
     text-align: center;
     padding: 15px 0;

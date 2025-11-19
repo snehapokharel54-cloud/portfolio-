@@ -1,56 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sneha Pokharel - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNEHA'S PORTFOLIO</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
-    <header>
-        <h1>Hello, I'm Sneha Pokharel</h1>
-        <p>Welcome to my personal portfolio</p>
+      <header>
+        <h1><i>MY PORTFOLIO</i></h1>
+       <h3><p>WELCOME TO MY PROFILE</p></h3> 
     </header>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I have been coding for four years.</p>
-            <p>I am doing my Bachelor's from BIC.</p>
-            <p>Please Scroll "....."</p>
-        </section>
+    <nav>
+        <a href="#Bio">Short Bio</a>
+        <a href="#Education">Education</a>
+        <a href="#Interests">Interests</a>
+        <a href="#Contact">Contact</a>
+        <a href="#Social Media">Social Media</a>
+    </nav>
+    
 
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>Schooling: Pokhariya Secondary School</li>
-                <li>Intermediate: Biratnagar International College</li>
-                <li>Bachelor's: Biratnagar International College (Ongoing)</li>
-            </ul>
+    <main>
+        <section id="Bio">
+            <h2>Short Bio</h2>
+            <img src="Sneha.jpg"  height="200">
+            <p>I am <strong>Sneha Pokharel</strong>, a second-year student currently pursuing my Bachelor’s degree at <strong>BIC</strong>. I’m from BRT, and I’m focused on learning, growing, and building a brighter future for myself. 
+            </p>
         </section>
+    
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
+        
+        <section id="Education">
+            <h2>Education History</h2>
+            <table border="3" cellspacing="0"cellpadding="10">
+                <tr>
+                    
+                    <th><i>Level</i></th>
+                    <th><i>Institution</i></th>
+                    <th><i>Year</i></th>
+                    <th><i>Grade</i></th>
+                </tr>
+                <tr>
+                    <td>+2 Science</td>
+                    <td>Pokhariya Sec School</td>
+                    <td>2022 - 2024</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <td>SEE</td>
+                    <td>Pokhariya Sec School</td>
+                    <td> 2022 </td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </section>
+        
+
+    
+        <section id="Interests">
+            <h2>Interests</h2>
+            
+            <ol>
                 <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
                 <li>Python</li>
-            </ul>
+                <li>CSS</li>
+            </ol>
+            
         </section>
+       
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Personal Portfolio Website</li>
-                <li>To-Do List Application</li>
-                <li>Weather App</li>
-            </ul>
+
+        <section id="Contact">
+            <h2>Contact Me</h2>
+            
+                <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                 <input type="Paragraph" id="message" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
-    </div>
-
-    <footer>
-        <p>© 2025 Sneha Pokharel | Portfolio</p>
+       
+        <footer>
+        <p>©2025 <i>Sneha</i>. <em>All rights reserved</em>.</p>
+       
+        <p>
+            <section id="Social Media">
+                <h2>Social Media</h2>
+                <a href="https://www.facebook.com/share/17GqnCTuga/?mibextid=wwXIfr">Facebook</a> <br> 
+            <a href="https://www.instagram.com/snehapokharel_?igsh=MXRxb2g1b2loYmZ5aA==">Instagram</a>
+           
+        </section>
+          
+        </p>
+        
     </footer>
+    </main>
 </body>
 </html>
