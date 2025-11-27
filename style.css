@@ -46,3 +46,295 @@ footer {
     padding: 15px 0;
     margin-top: 20px;
 }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #bfece7;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+body.dark-mode {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark-mode section {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px #000;
+}
+
+body.dark-mode nav {
+    background: #333;
+}
+
+body.dark-mode nav a {
+    color: white;
+}
+
+body.dark-mode header {
+    background: #4b275f;
+    color: #fff;
+}
+
+
+header {
+    background: #b771a2;
+    color: rgba(5, 24, 103, 0.822);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header button {
+    margin-top: 10px;
+    background: #f8bee0;
+    color: #222;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header button:hover {
+    background: #d5539c;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #f8bee0;
+    padding: 12px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #741e4b;
+}
+
+
+section {
+    background: #bfece7;
+    padding: 20px;
+    margin: 25px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 0 6px rgb(5, 48, 97);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #b771a2;
+    color: white;
+}
+
+
+.skills-section .skill {
+    margin-bottom: 20px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0%;
+    background: #b771a2;
+    transition: width 1s ease-in-out;
+    border-radius: 6px;
+}
+
+
+.project-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px gray;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    background: #fdeaef;
+}
+
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+    margin-top: 15px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.slider-buttons button {
+    padding: 8px 14px;
+    background: #b771a2;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-buttons button:hover {
+    background: #7c306d;
+}
+
+
+video, audio, canvas {
+    margin-top: 10px;
+}
+
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #b771a2;
+    color: white;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 22px;
+    transition: 0.4s;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.step8-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.step8-item {
+    background: #ffcbe9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+form button {
+    background: #b771a2;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #7c306d;
+}
+
+
+footer {
+    background: #b771a2;
+    color: white;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slider {
+        height: 180px;
+    }
+
+    .slides img {
+        height: 180px;
+    }
+
+    .step8-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
