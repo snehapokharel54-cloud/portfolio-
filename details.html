@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Details</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+<h2>Submitted Form Details</h2>
+
+<p><strong>Name:</strong> <span id="showName"></span></p>
+<p><strong>Email:</strong> <span id="showEmail"></span></p>
+<p><strong>Message:</strong> <span id="showMessage"></span></p>
+
+<script>
+document.getElementById("showName").textContent = localStorage.getItem("contactName");
+document.getElementById("showEmail").textContent = localStorage.getItem("contactEmail");
+document.getElementById("showMessage").textContent = localStorage.getItem("contactMessage");
+</script>
+
+</body>
+</html>

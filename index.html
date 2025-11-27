@@ -1,107 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNEHA'S PORTFOLIO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SNEHA'S PORTFOLIO</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-      <header>
-        <h1><i>MY PORTFOLIO</i></h1>
-       <h3><p>WELCOME TO MY PROFILE</p></h3> 
-    </header>
+  <header>
+    <h1><i>MY PORTFOLIO</i></h1>
+    <h3><p>WELCOME TO MY PROFILE</p></h3> 
+    <button id="themeToggle">Dark Mode/Light Mode</button>
 
-    <nav>
-        <a href="#Bio">Short Bio</a>
-        <a href="#Education">Education</a>
-        <a href="#Interests">Interests</a>
-        <a href="#Contact">Contact</a>
-        <a href="#Social Media">Social Media</a>
-    </nav>
+  </header>
+
+  <nav>
+    <a href="#Bio">Short Bio</a>
+    <a href="#Education">Education</a>
+    <a href="#Interests">Interests</a>
+    <a href="#Skills">Skills</a>
+    <a href="#Contact">Contact</a>
+    <a href="#SocialMedia">Social Media</a>
+  </nav>
+
+  <main class="container">
+    <section id="Bio">
+      <h2>Short Bio</h2>
+      <img src="Sneha.jpg" alt="Sneha" height="200">
+      
+      <p>I am <strong>Sneha Pokharel</strong>, a second-year student currently pursuing my Bachelor’s degree at <strong>BIC</strong>. I’m from BRT, and I’m focused on learning, growing, and building a brighter future for myself.</p>
+    </section>
+
+    <section id="Education">
+      <h2>Education History</h2>
+      <table border="3" cellspacing="0" cellpadding="10">
+        <tr>
+          <th><i>Level</i></th>
+          <th><i>Institution</i></th>
+          <th><i>Year</i></th>
+          <th><i>Grade</i></th>
+        </tr>
+        <tr>
+          <td>+2 Science</td>
+          <td>Pokhariya Sec School</td>
+          <td>2022 - 2024</td>
+          <td>B+</td>
+        </tr>
+        <tr>
+          <td>SEE</td>
+          <td>Pokhariya Sec School</td>
+          <td>2022</td>
+          <td>A</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="Interests">
+      <h2>Interests</h2>
+      <ol>
+        <li>HTML</li>
+        <li>Python</li>
+        <li>CSS</li>
+      </ol>
+    </section>
+
     
+    <section id="Skills" class="skills-section">
+      <h2>Skills</h2>
 
-    <main>
-        <section id="Bio">
-            <h2>Short Bio</h2>
-            <img src="Sneha.jpg"  height="200">
-            <p>I am <strong>Sneha Pokharel</strong>, a second-year student currently pursuing my Bachelor’s degree at <strong>BIC</strong>. I’m from BRT, and I’m focused on learning, growing, and building a brighter future for myself. 
-            </p>
-        </section>
+      
+      <div class="skill">
+        <div class="skill-label">
+          <span>HTML</span>
+          <span class="skill-percent" aria-hidden="true">0%</span>
+        </div>
+        <div class="skill-bar" data-skill-percent="95" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+          <div class="skill-fill"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>CSS</span>
+          <span class="skill-percent" aria-hidden="true">0%</span>
+        </div>
+        <div class="skill-bar" data-skill-percent="90" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <div class="skill-fill"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>JavaScript</span>
+          <span class="skill-percent" aria-hidden="true">0%</span>
+        </div>
+        <div class="skill-bar" data-skill-percent="70" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <div class="skill-fill"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Python</span>
+          <span class="skill-percent" aria-hidden="true">0%</span>
+        </div>
+        <div class="skill-bar" data-skill-percent="80" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <div class="skill-fill"></div>
+        </div>
+      </div>
+
+      
+    </section>
+    <section id="Projects">
+  <h2>My Projects</h2>
+
+  <div class="project-card" data-link=https://snehapokharel54-cloud.github.io/portfolio->
+    <h3>Project 1</h3>
+    <p>This is my first portfolio project.</p>
+  </div>
+
+  <div class="project-card" data-link=>
+    <h3>Project 2</h3>
+    <p>This is my second project.</p>
+  </div>
+
+  <div class="project-card" data-link=>
+    <h3>Project 3</h3>
+    <p>This is another amazing project.</p>
+  </div>
+</section>
+
+
+    <section id="Contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="contactMsg" style="margin-top: 10px; font-weight: bold;"></p>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.querySelector("input[name='name']").value.trim();
+    let email = document.querySelector("input[name='email']").value.trim();
+    let message = document.querySelector("textarea[name='message']").value.trim();
+    let msgBox = document.getElementById("contactMsg");
+
     
+    if (name === "" || email === "" || message === "") {
+        msgBox.style.color = "red";
+        msgBox.textContent = "All fields are required!";
+        return;
+    }
 
-        
-        <section id="Education">
-            <h2>Education History</h2>
-            <table border="3" cellspacing="0"cellpadding="10">
-                <tr>
-                    
-                    <th><i>Level</i></th>
-                    <th><i>Institution</i></th>
-                    <th><i>Year</i></th>
-                    <th><i>Grade</i></th>
-                </tr>
-                <tr>
-                    <td>+2 Science</td>
-                    <td>Pokhariya Sec School</td>
-                    <td>2022 - 2024</td>
-                    <td>B+</td>
-                </tr>
-                <tr>
-                    <td>SEE</td>
-                    <td>Pokhariya Sec School</td>
-                    <td> 2022 </td>
-                    <td>A</td>
-                </tr>
-            </table>
-        </section>
-        
+    if (!email.includes("@")) {
+        msgBox.style.color = "red";
+        msgBox.textContent = "Please enter a valid email address!";
+        return;
+    }
 
     
-        <section id="Interests">
-            <h2>Interests</h2>
-            
-            <ol>
-                <li>HTML</li>
-                <li>Python</li>
-                <li>CSS</li>
-            </ol>
-            
-        </section>
-       
+    localStorage.setItem("contactName", name);
+    localStorage.setItem("contactEmail", email);
+    localStorage.setItem("contactMessage", message);
+
+    msgBox.style.color = "green";
+    msgBox.textContent = "Form submitted successfully! Redirecting...";
+
+    
+    setTimeout(() => {
+        window.location.href = "form-details.html";
+    }, 1000);
+});
+</script>
+
+    </section>
+
+    <section id="SocialMedia">
+      <h2>Social Media</h2>
+      <a href="https://www.facebook.com/share/17GqnCTuga/?mibextid=wwXIfr">Facebook</a> <br>
+      <a href="https://www.instagram.com/snehapokharel_?igsh=MXRxb2g1b2loYmZ5aA==">Instagram</a>
+    </section>
+   <section id="ImageSlider">
+  <h2>Image Slider</h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="images.jpeg"  height="200">
+      <img src="mount-everest-aerial-view-himalayas-istock-3745.jpg" height="200">
+      <img src="premium_photo-1694819488591-a43907d1c5cc.jpeg"  height="200">
+      <img src="3542.webp"  height="200">
+    </div>
+  </div>
+
+  <div class="slider-buttons">
+    <button id="prevBtn">❮</button>
+    <button id="nextBtn">❯</button>
+  </div>
+</section>
+<section id="Media">
+  <h2>Media (Video, Audio & Canvas)</h2>
+
+  <h3>Video</h3>
+  <video controls width="400">
+    <source src="WhatsApp Video 2025-11-24 at 08.13.20_5248420f.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h3>Audio</h3>
+  <audio controls>
+    <source src="WhatsApp Video 2025-11-24 at 08.13.20_5248420f.mp4" type="audio/mpeg">
+    
+    Your browser does not support the audio element.
+  </audio>
+
+  <h3>Canvas</h3>
+  <canvas id="myCanvas" width="500" height="300" style="background:#ffffff; border:1px solid #555;"></canvas>
+</section>
 
 
-        <section id="Contact">
-            <h2>Contact Me</h2>
-            
-                <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+  </main>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+  
 
-                <label for="message">Message:</label>
-                 <input type="Paragraph" id="message" name="email" required>
+ 
+  <script src="script.js"></script>
 
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-       
-        <footer>
-        <p>©2025 <i>Sneha</i>. <em>All rights reserved</em>.</p>
-       
-        <p>
-            <section id="Social Media">
-                <h2>Social Media</h2>
-                <a href="https://www.facebook.com/share/17GqnCTuga/?mibextid=wwXIfr">Facebook</a> <br> 
-            <a href="https://www.instagram.com/snehapokharel_?igsh=MXRxb2g1b2loYmZ5aA==">Instagram</a>
-           
-        </section>
-          
-        </p>
-        
-    </footer>
-    </main>
+  <button id="backToTop">↑ Top</button>
+
+  
+<section class="flexbox-grid-note">
+    <h2>Difference Between Flexbox and Grid</h2>
+    <p><strong>Flexbox</strong> is a one-dimensional layout system used for arranging items in a single row or a single column.</p>
+    <p><strong>Grid</strong> is a two-dimensional layout system used for arranging items in rows and columns at the same time.</p>
+    <p>For this portfolio section, I used <strong>CSS Grid</strong> to display my items in four columns.</p>
+</section>
+
+<section class="step8-grid-section">
+    <h2>My Projects</h2>
+
+    <div class="step8-grid">
+        <div class="step8-item">Social Media</div>
+        <div class="step8-item">Contact</div>
+        <div class="step8-item">Skills  </div>
+        <div class="step8-item">Education</div>
+    </div>
+</section>
+
+<footer>
+    <p>©2025 <i>Sneha</i>. <em>All rights reserved</em>.</p>
+  </footer>
+
+
 </body>
 </html>
+
